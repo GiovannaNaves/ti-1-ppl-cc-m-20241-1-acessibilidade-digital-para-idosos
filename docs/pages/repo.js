@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const id = urlParams.get("id");
     
     if (id) {
-        fetch(`http://localhost:3001/topicos/${id}`)
+        fetch(`https://back-three-psi.vercel.app/topicos/${id}`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById("content-title").textContent = data.titulo;

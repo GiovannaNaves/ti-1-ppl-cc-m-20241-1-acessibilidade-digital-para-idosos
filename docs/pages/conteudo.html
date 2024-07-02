@@ -110,7 +110,7 @@
                 .forEach(item => addHTML(item));
         };
 
-        fetch("http://localhost:3001/topicos")
+        fetch("https://back-three-psi.vercel.app/topicos")
             .then(response => response.json())
             .then(data => {
                 data.forEach(item => {
@@ -137,7 +137,7 @@
             const item = items.find(item => item.id === id.toString());
             if (item) {
                 const { id, titulo, imagem, categorias } = item;
-                fetch('http://localhost:3001/favoritos', {
+                fetch('https://back-three-psi.vercel.app/favoritos', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ async function handleLogin(event) {
     console.log(nome_usuario)
     console.log(senha)
 
-    fetch('http://localhost:3001/usuarios', {
+    fetch('https://back-three-psi.vercel.app/usuarios', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

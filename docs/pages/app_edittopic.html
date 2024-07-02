@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const topicId = urlParams.get('id');
   console.log(topicId);
 
-  fetch(`http://localhost:3001/topicos/${topicId}`)
+  fetch(`https://back-three-psi.vercel.app/topicos/${topicId}`)
     .then(response => response.json())
     .then(data => {
       document.getElementById('titulo').value = data.titulo;
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const formObject = Object.fromEntries(formData.entries());
     formObject.categorias = categorias;
 
-    fetch(`http://localhost:3001/topicos/${topicId}`, {
+    fetch(`https://back-three-psi.vercel.app/topicos/${topicId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

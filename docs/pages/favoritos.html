@@ -72,7 +72,7 @@
 
         const favoritosGrid = document.getElementById("favoritos-grid");
 
-        fetch('http://localhost:3001/favoritos')
+        fetch('https://back-three-psi.vercel.app/favoritos')
             .then(response => response.json())
             .then(data => {
                 data.forEach(item => addFavoriteHTML(item));

@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"http-server docs/pages -p 3000 -o -c-1\" \"json-server --watch db.json --port 3001\""
+    "start": "http-server docs/pages -p 3000 -o -c-1"
   },
   "dependencies": {
     "concurrently": "^8.2.2",

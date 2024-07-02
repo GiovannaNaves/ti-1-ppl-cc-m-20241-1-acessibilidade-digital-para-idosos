@@ -211,7 +211,7 @@
     <script>
         const fetchMessages = async () => {
             try {
-                const response = await fetch('http://localhost:3001/mensagens'); // Altere o endpoint conforme necessário
+                const response = await fetch('https://back-three-psi.vercel.app/mensagens'); // Altere o endpoint conforme necessário
                 if (response.ok) {
                     const mensagens = await response.json();
                     displayMessages(mensagens);
@@ -250,7 +250,7 @@
 
         const deleteMessage = async (messageId) => {
             try {
-                const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
+                const response = await fetch(`https://back-three-psi.vercel.app/mensagens/${messageId}`, {
                     method: 'DELETE'
                 });
                 if (response.ok) {
@@ -286,7 +286,7 @@
             const newAuthor = document.getElementById(`edit-author-${messageId}`).value;
             const newContent = document.getElementById(`edit-content-${messageId}`).value;
             try {
-                const response = await fetch(`http://localhost:3001/mensagens/${messageId}`, {
+                const response = await fetch(`https://back-three-psi.vercel.app/mensagens/${messageId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

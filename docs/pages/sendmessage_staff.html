@@ -146,7 +146,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
   const messageObject = Object.fromEntries(formData.entries());
   messageObject.autor = userName;
 
-  fetch('http://localhost:3001/mensagens', {
+  fetch('https://back-three-psi.vercel.app/mensagens', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
